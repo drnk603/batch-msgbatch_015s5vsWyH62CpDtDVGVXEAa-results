@@ -1,4 +1,33 @@
 <!DOCTYPE html><html lang="de"><head>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://domain.com/#website",
+      "url": "https://domain.com",
+      "name": "domain"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://domain.com/#org",
+      "name": "domain",
+      "url": "https://domain.com"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://domain.com/cookie_policy.html",
+      "url": "https://domain.com/cookie_policy.html",
+      "name": "domain",
+      "isPartOf": {
+        "@id": "https://domain.com/#website"
+      },
+      "inLanguage": "de"
+    }
+  ]
+}
+</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Cookie-Richtlinie von domain - Erfahren Sie, wie wir Cookies verwenden, um Ihre Erfahrung zu verbessern und unsere Website zu optimieren.">
@@ -11,32 +40,40 @@
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
- </head>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="./header-footer.css">
+</head>
  <body>
-  <header class="l-header">
-   <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom" aria-label="Hauptnavigation">
-    <div class="container">
-     <a class="navbar-brand c-logo" href="/" aria-label="AutoLux Premium Startseite"> 
-      <svg class="c-logo__img" width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <header class="dr-header" aria-label="Main header">
+  <div class="dr-header-shell">
+    <div class="dr-header-inner">
+      <div class="dr-header-brand">
+        <div class="dr-logo" aria-label="domain logo" role="img">
+          <svg class="c-logo__img" width="150" height="40" viewBox="0 0 150 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
        <rect x="2" y="8" width="24" height="24" rx="4" fill="#D4AF37"></rect> <path d="M14 14L18 22L10 22L14 14Z" fill="#1a1a1a"></path> <text x="32" y="26" font-family="serif" font-size="18" font-weight="700" fill="#1a1a1a">AutoLux</text> <text x="102" y="26" font-family="serif" font-size="12" font-weight="400" fill="#6b7280">Premium</text>
-      </svg> 
-     </a>
-     <button class="navbar-toggler c-nav__toggle" type="button" aria-controls="navbarNav" aria-expanded="false" aria-label="Navigation umschalten"><span class="navbar-toggler-icon"></span></button>
-     <div class="collapse navbar-collapse c-nav" id="navbarNav">
-      <ul class="navbar-nav ms-auto c-nav__list">
-       <li class="nav-item c-nav__item"><a class="nav-link" href="/" aria-current="page">Startseite</a></li>
-       <li class="nav-item c-nav__item"><a class="nav-link" href="about.html">Über uns</a></li>
-       <li class="nav-item c-nav__item"><a class="nav-link" href="services.html">Leistungen</a></li>
-       <li class="nav-item c-nav__item"><a class="nav-link" href="team.html">Team</a></li>
-       <li class="nav-item c-nav__item"><a class="nav-link" href="contact.html">Kontakt</a></li>
-      </ul>
-      <div class="ms-lg-3 mt-3 mt-lg-0">
-       <a href="contact.html" class="btn c-button c-button--primary">Termin vereinbaren</a>
+      </svg>
+        </div>
+        <span class="dr-brand-text">domain</span>
       </div>
-     </div>
+      <nav class="dr-nav" aria-label="Main navigation">
+        <button class="dr-nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="dr-nav-list">
+          <span class="dr-nav-toggle-bar"></span>
+          <span class="dr-nav-toggle-bar"></span>
+        </button>
+        <ul class="dr-nav-list" id="dr-nav-list">
+          <li class="dr-nav-item"><a class="dr-nav-link" href="./index.html">Home</a></li>
+          <li class="dr-nav-item"><a class="dr-nav-link" href="./about.html">About</a></li>
+          <li class="dr-nav-item"><a class="dr-nav-link" href="./contact.html">Contact</a></li>
+          <li class="dr-nav-item"><a class="dr-nav-link" href="./gdpr-rights.html">Gdpr rights</a></li>
+          <li class="dr-nav-item"><a class="dr-nav-link" href="./impressum.html">Impressum</a></li>
+          <li class="dr-nav-item"><a class="dr-nav-link" href="./services.html">Services</a></li>
+          <li class="dr-nav-item"><a class="dr-nav-link" href="./team.html">Team</a></li>
+        </ul>
+      </nav>
     </div>
-   </nav>
-  </header>
+  </div>
+</header>
   <main class="l-main">
    <nav class="container py-3" aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -246,86 +283,56 @@
     </div>
    </section>
   </main>
-  <footer class="l-footer bg-dark text-white py-5">
-   <div class="container">
-    <div class="row g-4">
-     <div class="col-lg-4 col-md-6">
-      <h3 class="h5 mb-3">AutoLux Premium</h3>
-      <p class="mb-3">Ihr Partner für exklusive Fahrzeugaufbereitung und Premium-Detailing-Services in Deutschland.</p>
-      <div class="d-flex gap-3">
-       <a href="#" class="text-white" aria-label="Facebook"> 
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-         <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.84 3.44 8.87 8 9.8V15H8v-3h2V9.5C10 7.57 11.57 6 13.5 6H16v3h-2c-.55 0-1 .45-1 1v2h3v3h-3v6.95c5.05-.5 9-4.76 9-9.95z"></path>
-        </svg> 
-       </a> <a href="#" class="text-white" aria-label="Instagram"> 
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-         <path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"></path>
-        </svg> 
-       </a> <a href="#" class="text-white" aria-label="LinkedIn"> 
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-         <path d="M19 3A2 2 0 0 1 21 5V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V5A2 2 0 0 1 5 3H19M18.5 18.5V13.2A3.26 3.26 0 0 0 15.24 9.94C14.39 9.94 13.4 10.46 12.92 11.24V10.13H10.13V18.5H12.92V13.57C12.92 12.8 13.54 12.17 14.31 12.17A1.4 1.4 0 0 1 15.71 13.57V18.5H18.5M6.88 8.56A1.68 1.68 0 0 0 8.56 6.88C8.56 5.95 7.81 5.19 6.88 5.19A1.69 1.69 0 0 0 5.19 6.88C5.19 7.81 5.95 8.56 6.88 8.56M8.27 18.5V10.13H5.5V18.5H8.27Z"></path>
-        </svg> 
-       </a>
+  <footer class="dr-footer" aria-label="Site footer">
+  <div class="dr-footer-shell">
+    <div class="dr-footer-main">
+      <div class="dr-footer-brand-block">
+        <div class="dr-footer-logo" aria-label="domain" role="img"></div>
+        <div class="dr-footer-brand-text">domain</div>
+        <p class="dr-footer-disclaimer">
+          The information provided on domain.com is for general informational purposes only and does not constitute legal, financial, or professional advice. domain does not guarantee the completeness, reliability, or accuracy of any content and is not liable for any loss or damage arising from the use of domain.com. Users are responsible for evaluating all information and should obtain appropriate professional advice tailored to their individual situation where necessary.
+        </p>
       </div>
-     </div>
-     <div class="col-lg-2 col-md-6">
-      <h3 class="h5 mb-3">Navigation</h3>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="/" class="text-white-50 text-decoration-none">Startseite</a></li>
-       <li class="mb-2"><a href="about.html" class="text-white-50 text-decoration-none">Über uns</a></li>
-       <li class="mb-2"><a href="services.html" class="text-white-50 text-decoration-none">Leistungen</a></li>
-       <li class="mb-2"><a href="team.html" class="text-white-50 text-decoration-none">Team</a></li>
-       <li class="mb-2"><a href="contact.html" class="text-white-50 text-decoration-none">Kontakt</a></li>
-      </ul>
-     </div>
-     <div class="col-lg-3 col-md-6">
-      <h3 class="h5 mb-3">Rechtliches</h3>
-      <ul class="list-unstyled">
-       <li class="mb-2"><a href="privacy.html" class="text-white-50 text-decoration-none">Datenschutz</a></li>
-       <li class="mb-2"><a href="terms_and_conditions.html" class="text-white-50 text-decoration-none">AGB</a></li>
-       <li class="mb-2"><a href="terms_of_services.html" class="text-white-50 text-decoration-none">Nutzungsbedingungen</a></li>
-       <li class="mb-2"><a href="cookie_policy.html" class="text-white-50 text-decoration-none">Cookie-Richtlinie</a></li>
-       <li class="mb-2"><a href="gdpr-rights.html" class="text-white-50 text-decoration-none">DSGVO-Rechte</a></li>
-       <li class="mb-2"><a href="impressum.html" class="text-white-50 text-decoration-none">Impressum</a></li>
-      </ul>
-     </div>
-     <div class="col-lg-3 col-md-6">
-      <h3 class="h5 mb-3">Kontakt</h3>
-      <ul class="list-unstyled">
-       <li class="mb-2">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="me-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-         <path d="M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"></path>
-        </svg>
-        Leopoldstraße 127
-        <br>
-        80804 München, Deutschland
-       </li>
-       <li class="mb-2">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="me-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-         <path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"></path>
-        </svg>
-        <a href="tel:+4989235678901" class="text-white-50 text-decoration-none">+49 89 23567890</a>
-       </li>
-       <li class="mb-2">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="me-2" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-         <path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"></path>
-        </svg>
-        <a href="mailto:info@domain.com" class="text-white-50 text-decoration-none">info@domain.com</a>
-       </li>
-      </ul>
-     </div>
+      <div class="dr-footer-nav-legal-wrap">
+        <div class="dr-footer-nav-block" aria-label="Footer navigation">
+          <h2 class="dr-footer-heading">Navigate</h2>
+          <ul class="dr-footer-nav-list">
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./index.html">Home</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./about.html">About</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./contact.html">Contact</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./gdpr-rights.html">Gdpr rights</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./impressum.html">Impressum</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./services.html">Services</a></li>
+            <li class="dr-footer-nav-item"><a class="dr-footer-nav-link" href="./team.html">Team</a></li>
+          </ul>
+        </div>
+        <div class="dr-footer-legal-block" aria-label="Legal links">
+          <h2 class="dr-footer-heading">Legal</h2>
+          <ul class="dr-footer-legal-list">
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./cookie_policy.html">Cookie Policy</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./impressum.html">Impressum</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./privacy.html">Privacy</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./services.html">Services</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_and_conditions.html">Terms And Conditions</a></li>
+            <li class="dr-footer-legal-item"><a class="dr-footer-legal-link" href="./terms_of_services.html">Terms Of Services</a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <hr class="my-4 border-secondary">
-    <div class="row">
-     <div class="col-md-6 text-center text-md-start">
-      <p class="mb-0 text-white-50">© 2025 AutoLux Premium. Alle Rechte vorbehalten.</p>
-     </div>
-     <div class="col-md-6 text-center text-md-end">
-      <p class="mb-0 text-white-50">Entwickelt mit <span class="text-danger">❤</span> in München</p>
-     </div>
+    <div class="dr-footer-bottom">
+      <p class="dr-footer-meta">© <span class="dr-footer-year">2024</span> domain · All rights reserved · domain.com</p>
     </div>
-   </div>
-  </footer>
+  </div>
+</footer>
   <script src="script.js" defer=""></script>
  
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+if (typeof AOS !== "undefined" && !window.__AOS_INITIALIZED__) {
+  AOS.init({ once: true, duration: 700, easing: "ease-out-cubic" });
+  window.__AOS_INITIALIZED__ = true;
+}
+</script>
+<script src="./header-footer.js"></script>
+<script src="./consent.js"></script>
 </body></html>
